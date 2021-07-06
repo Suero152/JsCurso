@@ -1,0 +1,29 @@
+:root{
+    --primary-color: #0d0f12;
+    --secondary-color: #ffd425;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+div{
+    margin-bottom: 10px;
+}
+
+body{
+    background-color: var(--primary-color);
+}
+
+label{
+    color: var(--secondary-color);
+}
+
+h3{
+    color: var(--secondary-color);
+}
+
+li{
+    color: white;
+    margin-bottom: 10px;
+}

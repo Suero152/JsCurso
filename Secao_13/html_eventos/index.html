@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+</head>
+<body>
+    <p>
+        <!-- Mapeando o atributo Click -->
+        <button onclick="clickMe()">Clique-me</button>
+    </p>
+    <p>
+        Focus
+        <!-- Mapeando o atributo Focus -->
+        <input onfocus="focusMe()" type="text" name="focus-text">
+    </p>
+    <p>
+        Blur
+        <!-- Mapeando o atributo de Desfoque ( blur ) -->
+        <input onblur="blurMe()" type="text" name="blur-text">
+    </p>
+    <p>
+        Change
+        <!-- Mapeando o atributo Change -->
+        <input onchange="changeMe()" type="text" name="change-text">
+    </p>
+    <p onmouseover="overMe()">Passe o mouse sobre mim.</p>
+</body>
+</html>

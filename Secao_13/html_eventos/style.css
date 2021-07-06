@@ -1,0 +1,22 @@
+:root{
+    --primary-color: #0d0f12;
+    --secondary-color: #ffd425;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--primary-color);
+}
+
+button{
+    background-color: var(--secondary-color);
+}
+
+p{
+    color: var(--secondary-color);
+    padding: 1px;
+    width: 200px;
+}
