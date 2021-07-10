@@ -1,0 +1,4 @@
+git diff - Ve a diferença do arquivo da sua workdir e do commit mais atual.
+git add . - adicionando o ponto você adiciona todos arquivos da pasta.
+git reset HEAD nome.txt - removendo do add
+git checkout HEAD --nome.txt - desfazendo alterações

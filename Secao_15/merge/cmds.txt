@@ -1,0 +1,4 @@
+git checkout -b vostok1 - Cria e automaticamente troca para a branch vostok1
+Faça um commit
+git checkout master - Trocar para a MASTER branch
+git merge vostok1 - Faz alterações feitas nos arquivos dentro da branch vostok1 na branch master.

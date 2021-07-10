@@ -1,0 +1,5 @@
+touch nome.txt - Cria um arquivo com nome e extensão.
+git add arquivo.txt ( * ) - Adiciona um arquivo para ser vigiado e commitado
+git commit -m 'Mensagem de commit' - Faz um commit.
+git status - Verifica os arquivos vigiados e não vigiados, indicando ainda se estão modificados ou não.
+git log - Mostra o log de commits.

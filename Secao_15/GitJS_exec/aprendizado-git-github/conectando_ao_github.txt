@@ -1,0 +1,10 @@
+Primeiramente faça o comando para adicionar uma origem remota a seu repositório git.
+git remote add origin https://github.com/Suero152/teste.git
+
+Então já na branch main você pode fazer o seguinte comando
+git push -u origin main
+
+Você precisará colocar seu email e senha para prosseguir e está feito!
+
+Também é possivel resgatar arquivos de dentro do repósitorio GitHub utilizando o comando a seguir.
+git pull origin main

@@ -1,0 +1,5 @@
+Com o Prompt do git podemos fazer os seguites comandos:
+    - touch nomedoarquivo.txt ( cria um arquivo)
+    - nano nomedoarquivo.txt ( edita arquivos em txt)
+    - git add nomedoarquivo.txt ( o git passa a monitorar aquele arquivo )
+    - git commit -m 'Descrição do commit' ( gera um novo commit dos arquivos)

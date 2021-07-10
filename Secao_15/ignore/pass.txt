@@ -1,0 +1,2 @@
+Adicionar um arquivo oficial chamado .gitignore colocando nome de arquivos dentro dele, faz
+com que esses arquivos sejam ignorados de qualquer forma na hora de fazer um push ( basicamente upar algo para o GitHub ) para o GitHub.

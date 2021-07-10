@@ -1,0 +1,3 @@
+git log - Mostra os logs, junto do nome e email e sua mensagem.
+git log --pretty=oneline - Melhora a visualização do log.
+git log stat - Mostra os logs, só que com remoções e adições de arquivo e alterações também.

@@ -1,0 +1,6 @@
+1 - git checkout -b voyager1
+2 - touch voyager1.txt ( logo após fiz a edição do arquivo )
+3 - git add voyager1.txt
+4 - git commit -m 'Inserção de Voyager1'
+5 - git checkout master
+6 - git merge voyager1

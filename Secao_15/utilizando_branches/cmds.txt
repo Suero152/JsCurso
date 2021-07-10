@@ -1,0 +1,6 @@
+git branch - mostra as branchs existentes
+git branch novabranch - cria uma nova branch
+git checkout novabranch - move para a nova branch,.
+O que você commitar dentro dessa novabranch só vai existir nela, e então você poderá merger com outra branch
+
+git -d branch novabranch - deleta branchs.
