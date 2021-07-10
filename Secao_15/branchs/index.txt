@@ -1,4 +1,0 @@
-Branchs:
-    - Pense como se fossem ramos, podemos utilizar elas no projeto para desenvolver features isoladas.
-    - A branch principal é a branch master.
-    - É possível misturar branches utilizando o comando merge.

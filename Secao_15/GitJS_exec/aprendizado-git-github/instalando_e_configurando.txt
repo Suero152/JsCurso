@@ -1,5 +1,0 @@
-Instale o GIT em seu site oficial.
-Com o seguinte comando configure seu email.
-git config --global user.email "seuemail@example.com"
-E então configure sua senha.
-git config --global user.pass "seuemail@example.com"

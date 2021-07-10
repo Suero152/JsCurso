@@ -1,2 +1,0 @@
-Pense em branchs como caminhos, que podem ser mesclados. Nesses caminhos você pode criar coisas diferentes para que possam ser mescladas ao caminho principal que é a branch MAIN.
-Então resumidamente branchs são caminhos com circunstâncias diferentes, para que se possa ter uma melhor organização no time. 

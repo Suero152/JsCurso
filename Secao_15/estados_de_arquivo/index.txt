@@ -1,8 +1,0 @@
-Os arquivos monitardos ( do ultimo snapshot ) podem estar:
-    - Inalterados
-    - Modificados
-    - Selecionados
-
-Arquivos não monitorados:
-    - Arquivos que não estavam no ultimo commit.
-    - Arquivos que não estãao em seleção.

@@ -1,2 +1,0 @@
-# aprendizado-git-github
-Teste

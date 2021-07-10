@@ -1,8 +1,0 @@
- GITHUB
-
- ___
- Serviço de hospedagem para projetos GIT.
-  - é gratuito
-  - permite projetos opensource ou privados
-  - ajuda a desenvolver um networking entre a comunidade progamadora.
-  - e serve MUITO bem como um portfólio online.
