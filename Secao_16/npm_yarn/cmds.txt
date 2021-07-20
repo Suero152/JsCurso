@@ -1,0 +1,1 @@
+npm install http-server --global (--global faz com que se instale um pacote globalmente.)

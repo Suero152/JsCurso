@@ -1,0 +1,4 @@
+O ECMAScript ( Nome oficial do JavaScript ) possui suas versões que atendem a diferentes features.
+Então se o seu navegador foi atualizado pela ultima vez antes do lançamento de uma nova versão do JavaScript,
+caso não haja novas versões do seu navegador que atendem a essas diferentes features não é possível utiliza-las,
+assim sendo um problema de compatiblidade. 

@@ -1,0 +1,14 @@
+Webpack é uma ferramenta muita utilizada para desenvolvedores JavaScript. 
+Também conhecido como: Static Module bundler, o Webpack lê todo o código e monta um gráfico de dependências.
+Este gráfico é utilizado para montar pacotes de código, tendo como ideia, um código modularizado em JavaScript.
+
+Como utilizar o WebPack? no exemplo iremos utilizar uma importação em um arquivo index.js:
+- Vá no seu arquivo HTML e importe o WP da seguinte forma > <script src='main.js'></script>
+- Após isso, já no arquivo JavaScript coloque a seguinte linha de código > import moment from "moment/src/moment"
+Ou seja -> Importe moment de moment/src/moment
+- Agora no diretório do seu projeto, faça npx webpack. 
+
+
+comandos úteis: 
+npm install --save-dev webpack webpack-cli
+npx webpack --mode development
