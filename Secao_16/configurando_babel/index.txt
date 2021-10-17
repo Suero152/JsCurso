@@ -1,0 +1,20 @@
+Podemos configurar o babel com os seguintes arquivos:
+babel.config.js
+- É um arquivo JS.
+- Com ele configuramos presets, plugins etc.
+- Lido no momento em que os arquivos são convertidos.
+- É utilizado no ROOT do projeto para as configurações padrões.
+
+Utilizamos também o .babelrc
+- É um arquivo JSON
+- Configuramos os presets, plugins etc.
+- Lido no momento de converter os arquivos
+- É utilizao em subdiretórios para sobrescrever os valores padrões que vem no babel.config.js
+
+Nesta seção iremos ver como configurar o arquivo babel.config.js
+
+Depois de configurado, nós podemos simplificar os comandos feitos.
+---
+Terminal:
+npx babel src --out-dir dist
+---

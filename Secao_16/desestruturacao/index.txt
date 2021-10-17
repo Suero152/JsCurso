@@ -1,0 +1,3 @@
+Desestruturação de Objetos e Arrays.
+Segundo o site do mozilla, a desestruturação é uma expressão JavaScript que permite extrair dados de arrays e objetos 
+em variáveis distintas.

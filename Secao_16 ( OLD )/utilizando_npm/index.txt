@@ -1,0 +1,34 @@
+O NPM ja vem instalado com o NodeJS, então não precisamos nos preocupar em instalar.
+Primeiramente devemos inicializar o npm em nosso projeto.
+Para isso devemos ir no diretorio do projeto e digitar:
+npm init
+
+Ele irá fazer algumas perguntas para que você responda.
+Após isso ele irá te gerar um objeto JSON como essea baixo:
+{
+  "name": "npm_class",
+  "version": "1.0.0",
+  "description": "Primeiro projeto com NPM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "NPM",
+    "Class",
+    "Study"
+  ],
+  "author": "Suero Oreus",
+  "license": "ISC"
+}
+
+Se ele não tiver criado um arquivo chamado package.json não for criado crie com todo esse json.
+Após isso, no terminal digite:
+> npm install moment --save
+O moment seria o pacote que você quer inserir no seu projeto.
+então deverá ser criado uma pasta chamada node modules com todos pacotes que você quis instalar.
+
+Agora devemos ir no nosso index.html impotar o moment.js também desta forma:
+node_modules\moment\moment.js
+
+Se você conseguiu seguir os passos você já consegue usar o seu pacote normalmente.

@@ -1,0 +1,1 @@
+alert("Bem vindo à via láctea.")

@@ -1,0 +1,1 @@
+O operador spread é um recurso disponível a partir do ES6 que permite expandir os elementos de um objeto iteravel.

@@ -1,16 +1,16 @@
-// O Apóstrofo pode ser colocado para trabalhar com multi-lines
-const planet_json = `{
+let planet = `{
     "name": "Terra",
-    "physicalCharacteristics": {
-        "surfaceArea": 510072000,
-        "equatorialDiameter": 1756.2
+    "physicalCharacteristics":{
+        "surfaceArea": 3.14,
+        "equatorialDiameter": 12756.2
     },
-    "colors": ["Azul", "Branco", "Marrom"],
-    "startsRotation": "00:00",
-    "finishrotation": "23:57"
-}` 
-
-let planet = JSON.parse(planet_json)
-// Transformou em um objeto!
+    "colors": ["Blue", "Green", "White"],
+    "startingRotation": "00:00",
+    "finishingRotation": "23:59"
+}`
 console.log(planet)
-console.log(planet.colors[0])
+
+// Podemos converter essa string em um objeto JSON.
+
+let planetJSON = JSON.parse(planet)
+console.log(planetJSON)

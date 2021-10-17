@@ -1,0 +1,19 @@
+Versões do ECMAScript
+
+ECMAScript é o nome oficial do JavaScript, sendo ECMA: European Computer Manafacturers Association.
+
+Até então estamos na versão 8 do ECMAScript, que foi lançada em 2017.
+Antes da versão 8 tivemos as versões:
+7 - em 2016
+6 - em 2015
+5 - em 2009
+Observando essas datas, conseguimos notar que o JS não teve uma evolução muito consistente, com datas muito distintas
+entre lançamentos e até versões que nunca foram lançadas como a ES4.
+
+A versão ES6 trouxe muitas novidades para o JavaScript, trazendo também muita incompatibilidade com parte dos navegadores.
+Com essa incompatibilidade surgem ferramentas que possibilitem essa compatibilidade fazendo transpilações de código.
+Transpilação - Traduzir um código em uma versão para outra.
+
+
+Links Úteis:
+caniuse.com

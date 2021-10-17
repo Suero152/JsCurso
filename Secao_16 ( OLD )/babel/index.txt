@@ -1,0 +1,13 @@
+Transpilar é converter o código de uma versão para outra.
+Para isso podemos utilizar o Babel, ele pode converter o código que está em uma versão no JavaScript
+e assim converter para outras versões anteriores.
+Então ele é usado para permitir compatibilidade com navegadores que não atendem a algumas versões JavaScript.
+
+Utilizaremos npm para instalar este pacote.
+( npm install @babel/core @babel/cli @babel/preset-env --save-dev )
+
+E então faça esse comando:
+npx babel .\index.js -o compiled-script --presets=@babel/preset-env
+Ele irá converter para a versão ES5.
+
+Transpilando diretorios inteiros.

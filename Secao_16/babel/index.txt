@@ -1,13 +1,42 @@
-Transpilar é converter o código de uma versão para outra.
-Para isso podemos utilizar o Babel, ele pode converter o código que está em uma versão no JavaScript
-e assim converter para outras versões anteriores.
-Então ele é usado para permitir compatibilidade com navegadores que não atendem a algumas versões JavaScript.
+O que é transpilar?
+Isso é converter o código de uma linguagem para outra.
+A função do Babel é transpilar o código de uma versão para alguma anterior, utilizado para permitir compatibilidade.
 
-Utilizaremos npm para instalar este pacote.
-( npm install @babel/core @babel/cli @babel/preset-env --save-dev )
+Iremos utilizar o npm init para começarmos nosso processo.
 
-E então faça esse comando:
-npx babel .\index.js -o compiled-script --presets=@babel/preset-env
-Ele irá converter para a versão ES5.
+---
+Terminal:
+npm init -y // Flag utilizada para pular o processo de perguntas e colocar a configuração padrão.
+npm install @babel/core @babel/cli @babel/preset-env --save-dev -- Flag utilizada para marcar que serão pacotes utilizados apenas no desenvolvimento.
+// O pacote babel/core é para que o babel funciona, o babel cli é para que podemos utilizar em linhas de comando e o 
+// babel preset-env é para utilizarmos alguns presets na hora de transpilar.
+---
 
-Transpilando diretorios inteiros.
+Agora iremos transpilar um arquivo JavaScript. Que, no caso, será o arquivo index.js
+
+---
+Terminal
+npx babel index.js
+function testingES8(text1, text2) {
+  alert(`${text1}\n${text2}`);
+}
+---
+Ele conseguiu transpilar o código para uma versão anterior, removendo algumas coisas que poderiam causar conflito em uma versão mais nova.
+
+Podemos também fazer com que ele faça esse output dentro de um arquivo.
+---
+Terminal
+npx babel index.js -o compiled-script.js
+---
+
+Agora iremos fazer com que ele transpile o código para uma versão de nossa escolha, que no caso vai ser o ES5.
+---
+Terminal
+npx babel index.js -o compiled-script.js --presets=module:@babel/preset-env ( Talvez esse comando seja trocado por outro com novas versões do babel)
+---
+
+Após isso também podemos transpilar um diretório inteiro e fazer com que o output seja transferido para outro diretório da seguinte forma.
+---
+Terminal
+npx babel src --out-dir dist --presets=module:@babel/preset-env
+---

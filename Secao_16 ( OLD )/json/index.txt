@@ -1,0 +1,5 @@
+JSON ( JavaScript Object Notation ) é um formato de representação de dados em texto e deriva da forma
+como objetos em JS são organizados.
+
+JSON existe para comunicação de um sistema entre o outro, sendo um formato compacto e muito adotado.
+Pode ser um texto salvo no formato .json ou até mesmo uma string.

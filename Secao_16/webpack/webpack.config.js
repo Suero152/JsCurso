@@ -1,31 +1,31 @@
-const path = require('path')
+const path = require("path")
 
 module.exports = {
-    // Entradas
     entry: {
-        index: './src/index.js',
+        index: './src/index.js', // Arquvio a ser lido pelo webpack.
+        galaxy: './src/galaxy.js'
     },
-    // Padrão em salvar arquivos.
+
     output: {
-        filename: '[name].bundle.js',
+        filename: '[name].bundle.js', // Fazendo um padrão de output.
         path: path.resolve(__dirname, 'dist')
     },
+    
     module: {
-        // Para cada arquivo termindo em .js
-        // Utilize babel-loader
-        rules: [
-            { test: /\.js$/,
-            use: ['babel-loader']
+        rules: [ // Com o rules podemos fazer com que cada arquivo que o webpack passa o babel faça algo antes.
+            {
+                test: /\.js$/, // Aqui usamos uma expressão regular para que cada arquivo terminado em .js ocorra algo.
+                use: ['babel-loader']
             }
-        ],
+        ]
     },
-    // Vai procurar por qualquer alteração nos arquivos para processar o webpack denovo
-    // Aqui ja estamos utilizando npm install webpack-dev-server --save-dev
-    watch: true,
+
+    watch: true, // Processamento automatico no servidor de desenvolvimento após mudança nos arquivos.
 
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         watchContentBase: true,
         liveReload: true
     }
+
 }

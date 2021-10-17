@@ -1,10 +1,10 @@
 {
-    "name": "Terra",
-    "physicalCharacteristics": {
-        "surfaceArea": 510072000,
-        "equatorialDiameter": 1756.2
-    },
-    "colors": ["Azul", "Branco", "Marrom"],
-    "startsRotation": "00:00",
-    "finishrotation": "23:57"
+"name": "Marte",
+"physicalCharacteristics":{
+    "surfaceArea": 14.3,
+    "equatorialDiameter": 2.12756
+},
+"colors": ["Red", "Brown", "Gray"],
+"startingRotation": "00:00",
+"finishingRotation": "12:00"
 }

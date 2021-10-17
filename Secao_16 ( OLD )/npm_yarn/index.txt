@@ -1,0 +1,12 @@
+NPM (Node Package Manager) e YARN são dois gerenciadores de pacotes JavaScript.
+O Yarn surgiu em contrapartida criado pelo Facebook após o NPM apresentar diversos problemas de performance.
+Com o surgimento do Yarn, o NPM melhorou diversos desses problemas.
+Então podemos utilizar o NPM desde a sua versão 5 tem evoluido muito.
+
+O que é um Gerenciador de Pacote?
+São basicamente os responsaveís por gerenciar as dependências de uma aplicação.
+Conseguimos instalar pacotes por meio de linhas de comando, assim como o pip de Python.
+
+O NPM possui 3 recursos, uma ferramenta para instalar pacotes que busca dentro do próprio repositório de pacotes
+o pacote a ser instalado e também um site para documentações de pacotes.
+( https://www.npmjs.com/package/moment )

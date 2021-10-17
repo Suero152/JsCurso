@@ -1,17 +1,16 @@
 {
   "name": "npm_class",
   "version": "1.0.0",
-  "description": "Primeiro projeto com NPM",
+  "description": "Teste",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "NPM",
-    "Class",
-    "Study"
+    "study",
+    "test"
   ],
-  "author": "Suero Oreus",
+  "author": "suero",
   "license": "ISC",
   "dependencies": {
     "moment": "^2.29.1"

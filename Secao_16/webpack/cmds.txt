@@ -1,0 +1,2 @@
+Comandos úteis.
+npx webpack --mode development // A tag --mode junto de development nos permite ver mensagens de erro.

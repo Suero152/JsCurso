@@ -1,0 +1,18 @@
+O que significa NPX e NPMScripts e como podemos usar eles para agilizar nosso trabalho.
+
+NPX - Quando temos um arquivo instalado localmente, esse arquivo é preparado em um caminho dentro da pasta node_modules
+então esse comando irá utilizar um atalho para este caminho possibilitando que executemos os comandos via terminal.
+
+O que o NPMScripts faz?
+Ele instala pacotes globalmente, fazendo com que esses comandos possam ser utiliazdos sem o atalho do NPX.
+
+Como utilizamos o NPMScripts?
+---
+Terminal:
+npm instal http-server --global // A flag --global faz com que baixemos globalmente.
+---
+
+Podemos também criar nossos próprios atalhos dentro do package.json, dentro da instância: SCRIPTS
+"build": "npx babel index.js -o transpiled.js"
+
+Assim podemos utilizar assim, npm run build.

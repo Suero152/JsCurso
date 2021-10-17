@@ -1,0 +1,1 @@
+O operador Rest Param tem a utilidade de fazer com que uma função possa responder números indetermináveis de parâmetros.

@@ -1,0 +1,2 @@
+O NodeJS é um interpretador de código JavaScript, ele permite que criemos códigos que serão executados no backend.
+Conseguimos utilizar tudo do JS porém no backend.

@@ -19,4 +19,4 @@ console.log(noValue) //Undefined
 
 let confirmation = confirm("Você é lindo?")
 
-console.log(confirmation) // Retorna true ou false dependendo da resposta.
+console.log(confirmation)

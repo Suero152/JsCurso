@@ -1,39 +1,30 @@
+// Desestrutração de Objetos.
 let spaceship = {
     name: 'Colossus',
     crewQuantity: 10,
-    isHitched: false
+    isHitched: false,
 }
-/*
+
 let spaceshipName = spaceship.name
-let spaceshipCrewQuantity = spaceship.crewQuantity
-console.log(spaceshipName, spaceshipCrewQuantity)
-*/
+let crewQuantity = spaceship.crewQuantity
+console.log(spaceshipName, crewQuantity)
 
-// Fazendo a desestruturação
+// Podemos  mapear as propriedades de uma forma mais prática desta forma:
+let { name: spaceshipName, crewQuantity } = spaceship // Se o nome da variável desejada for o mesmo da propriedade podemos
+                                                    //colocar desta forma.
+console.log(spaceshipName, crewQuantity)
 
-// Aqui estamos colocando o objeto spaceship para receber a desestruturação a seguir.
-let {name: spaceshipName, crewQuantity: crewQuantity1} = spaceship
-// Então ele ira mapear a variavel spaceshipName para a propriedade name de spaceship e a mesma coisa com crewQuantity.
-console.log(spaceshipName, crewQuantity1)
+// Também podemos desestruturar arrays.
+let spaceships = ["Colossus", "Artemis", "Phoenix"]
+let colossus = spaceships[0]
+let artemis = spaceships[1]
+console.log(colossus, artemis)
 
-// Simplificando mais ainda
-let {name: spaceshipName2, crewQuantity} = spaceship
-console.log(spaceshipName2, crewQuantity)
+let [colossus, artemis] = spaceships
+console.log(colossus, artemis)
 
-// Agora desestruturação com arrays.
-
-let spaceships = ['Colossus', 'Artemis', 'Phoenix']
-
-let colossus1 = spaceships[0]
-let artemis1 = spaceships[1]
-console.log(colossus1, artemis1)
-
-// Agora com desestruturação
-let [colossus, artemis, fenix, puller] = spaceships
-console.log(colossus, artemis, fenix, puller)
-
-// Podemos passar essa desestruturação como parâmetros para funções.
-function  printSpaceships([colossus, artemis, fenix, puller]){
-    console.log(colossus, artemis, fenix, puller)
+// Podemos usar a desestruturação em funções também ( útil ).
+function printSpacehips([colossus, artemis, fenix, puller]){
+    print(colossus, artemis, fenix, puller)
 }
 printSpaceships(spaceships)
