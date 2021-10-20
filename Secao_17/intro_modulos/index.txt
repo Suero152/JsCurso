@@ -1,0 +1,10 @@
+O que são módulos JS?
+São arquivos divididos para serem importados quando necessário, sendo divididos em partes que permitem
+a reusabilidade, manutenibialidade e a separação dos contextos das aplicações.
+
+Antes do ES6 não era possível tratar módulos com o JavaScript, a partir disso, surgiram vários padrões
+como o CommonJS que é uma especificação de modularização para o JavaScript e também o padrão que o NodeJS adota.
+
+Após o surgimento do ES6 o Node conseguiu adaptar sua estrutura para utilizar esse novo formato este novo formato,
+porém manteve o formato do CommonJS.
+Graças ao Babel conseguimos utilizar esses dois padrões no FrontEnd.

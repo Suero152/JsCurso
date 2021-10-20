@@ -19,8 +19,12 @@
   "dependencies": {
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
+<<<<<<< HEAD
+    "babel-loader": "^8.2.2"
+=======
     "babel-loader": "^8.2.2",
     "core-js": "^3.18.3",
     "moment": "^2.29.1"
+>>>>>>> 6b4b4bff7bae8f504ba1dd10b0be77802bdd578f
   }
 }

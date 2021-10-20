@@ -1,0 +1,1 @@
+Iremos refazer o exercício anterior porém agora com os módulos de exportação do ES6

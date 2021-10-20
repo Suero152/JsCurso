@@ -1,0 +1,1 @@
+Podemos colocar outro nome no momento em que um módulo é exportado ou importado para nossa utilização.

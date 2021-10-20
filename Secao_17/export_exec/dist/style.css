@@ -1,0 +1,17 @@
+:root{
+    --primary-color: #0d0f12;
+    --secondary-color: #ffd425;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--primary-color);
+}
+
+p{
+    color: var(--secondary-color);
+    font-size: 30px;
+}
