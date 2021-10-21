@@ -1,0 +1,1 @@
+Podem haver casos que precisemos executar mais promises de uma vez, então precisamos fazer uma operação atômica.

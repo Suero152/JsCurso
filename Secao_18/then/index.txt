@@ -1,0 +1,11 @@
+O que são promises?
+Dão suporte para operações assíncronas, guardando operações que precisamos dentro de objeto, cuja a classe é chamada de Promise.
+Para executa-los é preciso chamar essa função.
+
+As promises tem 4 estados.
+Pendente - Quando é criada e não é executada
+Realizada - Sucesso na operação
+Recusado - Falha na operação
+Estabelecida - Foi realizada ou recusada.
+
+Nós que decidimos se ela vai ser realizada ou recusada.

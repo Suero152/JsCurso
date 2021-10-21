@@ -1,0 +1,5 @@
+Iremos ver duas funções muito interessantes do JavaScript chamadas SetInterval e SetTimeout.
+São HOFs ou seja, funções de alta ordem que recebem outra função como parâmetro.
+Elas tem a função de executar uma função depois de um determinado intervalo de tempo.
+A diferença entre as duas é que a SetTimeout executa essa funçãoa penas uma vez e a SetInterval executa contínuas vezes
+durante um intervalo de tempo determinado.

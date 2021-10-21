@@ -1,0 +1,7 @@
+O que é uma execução síncrona e uma execução assíncrona?
+
+Execução síncrona - Segue um fluxo linear, 
+seguindo passo a passo executando apenas uma instrução se a anterior for completa.
+
+Execução assíncrona - Não segue um fluxo linear,
+Não aguarda o fim da execução anterior para passar ao proximo passo.
