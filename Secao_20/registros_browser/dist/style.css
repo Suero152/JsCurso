@@ -1,0 +1,39 @@
+:root{
+    --primary-color: #0d0f12;
+    --secondary-color: #ffd425;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+/* Classes de Auxiliares */
+
+.container{
+    padding: 0 2%;
+    margin: auto;
+    max-width: 1280px;
+}
+
+/* Classes de Estilo*/
+body{
+    background-color: var(--primary-color);
+}
+
+h3{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+ul{
+    color: orangered;
+    font-size: 30px;
+    list-style-type: none;
+}
+
+li{
+    color:var(--secondary-color);
+    font-size: 25px;
+    list-style-type: none;
+}

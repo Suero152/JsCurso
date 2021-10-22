@@ -1,0 +1,16 @@
+Uma API é uma sigla para Appliaction Programming Interface, é um termo antigo que significa que dois sistemas
+se comunicam, ou seja, um sistema consegue usar funcionalidades um do outro permitindo enviar e receber dados.
+
+Exemplo de API:
+Quando retiramos dinheiro de um caixa eletrônico, ele consome de uma API para se conectar com a sua conta.
+
+Com a internet diversos tipos de API surgiram, a mais utilizada hoje é a REST API que é feita sob protocolo HTTP.
+
+
+REST significa REpresentational State Transfer, e é um modelo que permite a criação de APIs bem definidas.
+Como funciona sobre HTTP, ele utiliza os verbos de acesso:
+GET, POST, PATCH/PUT e DELETE
+
+As requisições de APIs funcionam da seguinte forma:
+Quando colocamos uma URL em um navegador, fazemos uma requisição que retorna uma página, quando requisitamos
+uma API ela nos retorna dados em formatos de arquivo como: JSON, XML e mais.
