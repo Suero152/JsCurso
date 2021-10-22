@@ -1,0 +1,11 @@
+Para começarmos essa seção, precisamos instalar dois pacotes para que o babel consigue fazer a transpilação
+para o ES5 quando formos utilizar as Async Functions.
+
+Os pacotes são:
+corejs
+regenerator-runtime
+
+---
+Terminal:
+npm install core-js@3 regenerator-runtime --save
+---

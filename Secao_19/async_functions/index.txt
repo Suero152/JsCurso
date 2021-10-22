@@ -1,0 +1,2 @@
+As async functions são funções que trabalham de forma asíncrona.
+Elas retornam promises, então podemos tratá-las igual promises.

@@ -1,0 +1,5 @@
+O que é o await?
+
+Await é uma palavra chave que é utilizada dentro de uma async function.
+Com ela é possível esperar a execução de outra promise para executar alguma outra, 
+assim podendo descartar o encadeamento de promises.
