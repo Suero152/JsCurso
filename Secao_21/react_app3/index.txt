@@ -1,0 +1,15 @@
+States
+------
+Os estados são objetos JavaScript que guarda os dados de um componente e define seu comportamento.
+O State se diferencia do prop porque os props são passados por outros componentes, já o State pertence a cada componente.
+Os hooks permitem que facemos alterações nos States sem precisarmos fazer uma classe.
+Esta parte será documentada em ./react_project/src/components/planets
+
+Lifecycle
+---------
+Todo component tem um lifecycle, isso quer dizer que todo componente vai existir em um ciclo.
+O primeiro passo é o estado de Mounting que é quando ele é colocado no DOM
+O segundo passo é o estado de Updating que é quando ele está sendo atualizado dentro desse DOM.
+O terceiro passo é o estado de unMouting que é quando ele é retirado do DOM.
+Agora vamos incluir o Lifecycle em nossa classe.
+Esta parte será documentada em ./react_project/src/components/planets

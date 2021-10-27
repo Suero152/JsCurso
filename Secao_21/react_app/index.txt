@@ -1,0 +1,21 @@
+REACT APP
+---------
+
+Agora iremos fazer a instalação do React e fazer uma aplicação React.
+Iremos utilizar o npx create-react-app que irá criar um projeto React para trabalharmos.
+
+---
+Terminal:
+npx create-react-app react_project
+---
+
+Será criado um espaço de desenvolvimento bem agradável, iremos começar analisando que é criado uma pasta public
+onde contém um arquivo chamado App.js, que contém uma função chamada App que será onde iremos fazer toda nossa aplicação.
+Também serão criados scripts sendo eles os mais importantes, 
+npm start ( inicia um servidor de desenvolvimento React.)  e npm build ( compila todo o seu projeto
+ para css, html e javascript)
+
+
+Criando seu primeiro Component
+------------------------------
+Toda essa parte ira ser documentada em react_project/src/App.js

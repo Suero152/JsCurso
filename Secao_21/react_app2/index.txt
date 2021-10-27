@@ -1,0 +1,44 @@
+AGRUPANDO COMPONENTS
+--------------------
+Iremos ver como podemos agrupar nossos elementos em React.
+Esta parte será documentada em ./react_project/src/components/planets
+
+DIVIDINDO E REUTILIZANDO COMPONENTS
+-----------------------------------
+Iremos ver como reaproveitar components em outras situações.
+Esta parte será documentada em ./react_project/src/components/planets
+
+Props
+-----
+Props são propriedades e também funções puras. Então todos os components em React tem que agir como funções
+puras ( que não altera valores ) em relação a suas props.
+Esta parte será documentada em ./react_project/src/components/planets
+
+Criando um Component com Props
+------------------------------
+Iremos fazer um exercício para fixar o que aprendemos.
+Esta parte será documentada em ./react_project/src/components/planets
+
+Eventos
+-------
+Podemos fazer eventos com o React assim cono no HTML quando usamos  onClick e etc...
+Também podemos passar um como parâmetro para um component.
+Esta parte será documentada em ./react_project/src/components/planets
+
+Renderização Condicional
+------------------------
+Vamos aprender a como exibir informações quando desejarmos, como o botão de log-out para um usuário loggado ou
+o botão de log in para um usuário desloggado
+Esta parte será documentada em ./react_project/src/components/planets
+
+Impedindo Renderizações
+-----------------------
+Como impedir que algo renderize de acordo com o que você quer.
+Esta parte será documentada em ./react_project/src/components/planets
+
+States
+------
+Os estados são objetos JavaScript que guarda os dados de um componente e define seu comportamento.
+O State se diferencia do prop porque os props são passados por outros componentes, já o State pertence a cada componente.
+Os hooks permitem que facemos alterações nos States sem precisarmos fazer uma classe.
+Esta parte será documentada em react_app3

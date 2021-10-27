@@ -1,0 +1,31 @@
+Hooks
+-----
+Os hooks fazem parte de uma recente atualização do React. São uma forma de utilizarmos states, lifecycles e 
+compartilhar lógica em componentes funcionais em vez de componentes de classe.
+Esta parte será documentada em ./react_project/src/components/planets
+
+Controlled e Uncontrolled components
+------------------------------------
+Uncontrolled component -
+Em geral é um componente que tem seus dados gerenciados
+pelo próprio DOM sem relação com o State normal.
+
+Controlled component -
+Components controlados estão associados com os estadosd o component,
+ou seja, eles exibem informações baseadas no State, se o state é alterado
+essas informações também são.
+Esta parte será documentada em ./react_project/src/components/planets
+
+SPA e Rotas
+-----------
+Um SPA é um Single Page Application, que são aplicações web que tentam trazer uma sensação similar a uma aplicação
+desktop, páginas essas que não recarregam em sua navegação.
+O SPA funciona utilizando-se rotas, são caminhos que utilizamos no browser para acessarmos páginas específicas de um browser.
+Podemos utilizar essas rotas com a biblioteca Routers do React!
+Antes de tudo vamos instalar a Biblioteca para se utilizar Routers em nosso projeto!
+---
+Terminal:
+npm i react-router-dom --save
+---
+
+O resto  será documentado em ./react_project/src/screens

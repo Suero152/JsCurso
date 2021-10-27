@@ -1,0 +1,22 @@
+REACT
+-----
+
+O React é uma biblioteca JavaScript, declarativa, eficiente e flexível para criação de UIs ( interfaces de usuário. )
+O React surgiu em 2011 dentro do Facebook, é uma biblioteca ( não um framework. ), 
+usado para criar SPAs ( Single Page Aplications ) e é baseado em Components.
+
+O React também pode ser utilizado para criar aplicações mobiles e é usado por diversas empresas famosas como:}
+Netflix, Whatsapp, Facebook, Instagram e muito mais.
+
+COMPONENTS
+----------
+
+Components são pedaços do website que você encaixa com o decorrer do desenvolvimento.
+Funcionam como funções JavaScript, aceitam entrada arbitárias ( Props ) e retornam elementos React. 
+
+
+JSX
+---
+
+O que é o JSX? O JSX serve para descrevermos como nossa UI ( User Interface ) será implementada.
+No geral, o JSX não é interpretado pelo browser, por isso devemos utilizar um transpilador para isso.

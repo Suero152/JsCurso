@@ -1,0 +1,13 @@
+Adicionando mais telas
+----------------------
+Iremos atualizar nossas páginas e deixa-la mais simples e com uma navegação SPA adicionando mais telas.
+Esta parte será documentada em ./react_project/src/components
+
+Navegando entre as telas
+------------------------
+Veremos como navegar entre as telas sem reload.
+
+Redirect e 404
+--------------
+Agora iremos fazer uma coisa importante em rotas, podemos fazer algum redirect também sem recaregamento
+ou uma página 404 que é quando a pagina que ele procura está errada.
