@@ -1,0 +1,9 @@
+<%- include('../layouts/header.ejs', {title: 'Edição de lista' }) %>
+<%- include('../layouts/menu.ejs') %>
+        <section class="section">
+            <div class="container">
+                <h1 class="title size-4">Editar Lista</h1>
+                <%- include('form.ejs', {url: `/checklists/${checklist._id}/?_method=put`, checklist: checklist}) %>
+            </div>
+        </section>
+<%- include('../layouts/footer.ejs') %>

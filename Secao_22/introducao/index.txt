@@ -1,0 +1,22 @@
+Vamos aprender coisas sobre o backend nesta seção.
+Vamos aprender neste módulo:
+O que é o backend
+O que é o NodeJs e porque ele é importante
+Como rodar códigos no servidor.
+O que é o ExpressJS e como utilizá-lo
+O que é rest e o que são rotas
+O que é o MongoDb e como utilizá-lo
+Como integrar o MongoDb com o NodeJs
+Como renderizar páginas no ExpressJS
+Como criar um To Do list com ExpressJs.
+
+
+O que é o Backend?
+------------------
+Antes de explicar o que é backend vamos explicar o que é frontend.
+O frontend cuida da parte de exibição dos dados para o usuário,
+já o Backend cuida desses dados em si, para isso, precisamos de uma estrutura que seja capaz de:
++ Receber e fornecer estes dados
++ Validar
++ Armanzenar
++ Assegurar a consistência.

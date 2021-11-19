@@ -1,0 +1,209 @@
+Banco de Dados
+--------------
+
+
+Um banco de dados é uma coleção organizada de dados que se relacionam para gerar uma informação válida.
+Ou seja, o banco de dados é uma maneira de organizar nossos dados, são operados pelos sistemas de operação
+de bancos de dados.
+Os bancos relacionais possuem os dados organizados em forma de tabela , já os bancos de dados não relacionais
+eles são conhecidos como bancos NoSQL, pois não têm linguagens como SQL para acessar ele e não tem uma estrutura
+de tabela como os relacionais. Temos várias formas de organizar os bancos de dados não relacionais, podendo ser eles
+como documento ( .JSON, .XML etc) e também chave e valor, eles são mais escaláveis e com melhor performance, mas possuem menor consistência de dados.
+Iremos dar prefêrencia aos bancos não relacionais e iremos utilizar o MongoDB para isso.
+
+O que é o MongoDB?
+------------------
+
+
+O MongoDB é um banco de dados orientado a documentos em formato BSON, esse formato permite que escrevermos de forma
+JSON e abrange mais formatos de dado e é bem parecido com o comum.
+Nos devemos utilizar o MongoDB pois ele não tem um esquema fixo, tem perfomance boa, sua legibilidade é boa e é bem
+disponível e escalável.
+
+-------------------------------
+Fazendo a instalação do MongoDB
+-------------------------------
+
+
+
+Primeiros iermos instalar o Mongo Terminal onde iremos fazer o uso do MongoDB seguindo o passo a passo do link a seguir:
+https://docs.mongodb.com/manual/tutorial/install-mongodb-enterprise-on-windows/ ou:
+https://pplware.sapo.pt/tutoriais/mongodb-instalar-e-configurar-a-bd-nosql-no-windows-10.
+
+
+Após fazer sua instalação iremos abrir o arquivo mongo.exe localizado em bin onde baixamos o mongo e começar a usar nosso banco de dados.
+Você pode também criar um atalho para acessar mais rapidamente via powershell fazendo:
+"Set-Alias mongod "$mongoDirectory\mongod.exe"
+Set-Alias mongo "$mongoDirectory\mongo.exe""
+
+Agora no terminal iremos fazer
+---
+Terminal:
+mongo // Para se conectar ao banco de dados
+use todo-list // podemos fazer isso para mudar o banco de dados que estamos fazendo alguma coisa.
+db.createCollection('checklists') // Assim criamos uma nova collection.
+show collections // Vemos todas collections dentro do nosso banco de dados.
+show dbs // Podemos ver como está o nosso banco de dados.
+
+
+-----------------------------
+Manipulando dados com MongoDB
+-----------------------------
+
+
+
+Primeiro iremos inicializar o MongoDB.
+---
+Terminal:
+mongo
+use todo-list2 // Movendo para o banco de dados desejado.
+db.checklist.insert({name: 'Primeiro checklist', tasks:[{name: "Tarefa 1"}, {name: "Tarefa 2"}]})
+// Estamos inserindo uma checklist na database contendo um array de objetos task.
+// Também podemos utilizar o .save(), ambos irão fazer a mesma coisa.
+// Agora vamos conferir se isso foi adicionado ao nosso banco de dados.
+db.checklist.find() // Quando fazemos isso ele mostra tudo o que temos dentro de nossa DB
+---
+Você pode estar se perguntando, "iremos utilizar esses comandos na nossa rotina?", na verdade não.
+Não iremos utilizar bem estes comandos, na verdade vamos utilizar um adaptador para conectar o Node com o Mongo.
+Então não iremos sempre ter que abrir isso para mexer no dado, mas é interessante ter ciência desse terminal, pois pode ser útil eventualmente,.
+---
+Terminal:
+// Também podemos encontrar valores específicos utilizando o find.
+db.checklist.find("name": "Primeiro checklist")
+
+// Para atualizar valores utilizamos o update, passando como primeiro parâmetro o que queremos que seja atualizado 
+// e o que deverá ser sua atualização.
+
+db.checklist.update({"name": "Primeiro checklist"}, {"name": "Checklist 1"})
+
+// Podemos usar o delete para deletar valores.
+db.checklist.deleteOne({"name": "Checklist 1"})
+---
+
+
+-----------------------------
+Relacionando dados no MongoDB
+-----------------------------
+
+
+Agora iremos ver como botar em prática as relações dento do MongoDB.
+Alguns dados precisam estar anexado  a outros para que podemos compreende-los corretamente.
+Por exemplo, se você possuir no seu banco de dados informações que representem missões espaciais e informações
+que representem os tripulantes de missões epscaiais, é interessante que você possua uma forma de relacionar 
+quais tripulantes participaram de quais missões.
+
+Existem 3 tipos de associações importantes sendo elas:
+one-to-one. ( Seguindo  o exemplo anterior é quando só vai haver um tripulante e esse tripulante só irá ter participado de 1 missão.)
+one-to-many ( Uma missão espacial porém vários tripulantes.)
+many-many ( Mais de uma missão com mais de um tripulante)
+
+Então quando formos usar alguns desses relacionamentos como a one-to-many devemos saber que:
+
+Devemos devolver o documento inteiro com uma query simples para que o MongoDB seja mais ágil em fazer os seus processos.
+
+Devemos saber que o documento não vai atingir um tamanho muito grande.
+
+Quando os dados a serem associados só são úteis junto com o documento que queremos associar.
+
+----------------------------
+Associação entre collections
+----------------------------
+Vamos ver como criar uma referência entre documentos de collections diferentes.
+---
+Terminal:
+mongo
+use todo-list2
+db.createCollection("task") // Criando uma collection
+db.checklist.insert({name: 'Atividades da manhã'})
+db.task.insert({name: "Preparar o café", done: false}) // Criamos dois valores para se relacionarem mais tarde.
+// Resgatando o id da checklist.
+db.checklist.find("") // 6183d24ba625ccef23130322
+db.task.insertMany([{name: "Preparar o café", done: false, checklistID: ObjectId('6183d24ba625ccef23130322')}, {name: "Ligar o notebook", done: true, checklistID: ObjectId('6183d24ba625ccef23130322')}]) 
+// Agora vamos relacionar a nossa checklist a esses valores utilizando insert many para insercionar mais de um objeto dentro da collection.
+// Agora vamos trazer todas as tasks de uma checklist.
+db.checklist.aggregate({$lookup: {from: "task", localField: "_id", foreignField: "checklistID", as: "tasks"}}).pretty()
+
+// Aqui estamos utilizando o aggregate que vai agregar varios resultados da nossa pesquisa usando o operador do Mongo $lookup.
+// Ele irá utilizar os parâmetros "from" para saber qual collection ele vai acessar para procurar tais valores, localField é onde se encontra o id de nossa checklist que será associada,
+// e o foreignField é o ID da checklist que será associada com cada task, para deixar o nosso resultado mais legível iremos utilizar o pretty() no final desta query.
+
+----------
+Operadores
+----------
+Os operadores são ferramentas extras para facilitar nossa vida no Mongo, agora iremos ver como utiliarmos eles.
+
+---
+Terminal:
+use todo-list2
+// Para achar uma certa coisa e verificar se ela existe dentro de uma collection podemos utilizar o find!
+db.task.find({"name": "Preparar o café"})
+// E se caso o nosso desejo fosse inserir mais parâmetros para essa busca? Nós podemos  utilizar o operador $and.
+db.task.find({$and: [{name: "Preparar o café"}, {done: false}]}) // Assim podemos colocar mais parâmetros dentro do array após o and!
+
+// Também podemos utilizar o operador or, que também nos permite botar mais parâmetros dentro de uma busca.
+// A diferença é que o or nos permite que apenas um de nossos parâmetros esteja sendo seguido e não todos como o utilizando and!
+db.task.find({$or: [{name: "Preparar o café"}, {done: false}]})
+
+// Temos um operador que se chama exists, ele apenas verifica se aquele parâmetro de busca vai existir em nossos dados e retornar caso exista.
+db.task.find({checklistID: {$exists: true}})
+---
+
+Existem muito mais operadores no MongoDB que são úteis iguais a estes, você pode ver isso no link a seguir:
+https://docs.mongodb.com/manual/reference/operator/
+
+
+-----------------------
+Instalação do Mongoose
+-----------------------
+Podemos desenvolver um projeto utilizando um adaptador entre o Mongo e entre o Node para facilitar nosso trabalho.
+E fazemos isso utilizando o Mongoose que faz uma adaptação entre o Mongo e o Node com Express.
+
+Agora iremos fazer essa instalação.
+---
+Terminal:
+npm install mongoose --save
+---
+Após a instalação, podemos criar uma pasta chamada config dentro de nosso projeto.
+Nessa pasta iremos criar o arquivo "database.js" que será onde iremos configurar nosso Mongoose.
+( O resto desta parte será documentada em 'Secao_22\banco_de_dados\config\database.js' )
+
+---------------------------
+Mapeamento Objeto-documento
+---------------------------
+Agora que já temos o Mongoose instalado podemos partir para o seu uso, nós vamos começar a explorar mais a parte de MVC.
+
+( O resto desta parte será documentada em 'Secao_22\banco_de_dados\src\models' )
+
+-----------------
+Models e as rotas
+-----------------
+Agora vamos começar o Mongoose de fato no nosso projeto.
+( O resto desta parte será documentada em 'Secao_22\banco_de_dados\src' )
+
+---------------
+Lendo os models
+---------------
+Vamos aprender a ler dados de nossos models.
+( O resto desta parte será documentada em 'Secao_22\banco_de_dados\src' )
+
+-------------------------------
+Atualização e remoção dos dados
+-------------------------------
+Iremos ver como atualizar e remover dados.
+( O resto desta parte será documentada em 'Secao_22\banco_de_dados\src' )
+
+
+-------------------------------
+EJS e configuração com Express.
+-------------------------------
+EJS é uma ferramenta que nos possibilita a criação de páginas dinâmicas dentro do Express.
+Conseguimos embutir codigos JS para renderizar as páginas.
+Esse fatores possibilitam a componentização das views com os dados gerados.
+
+Antes de tudo vamos instalar o EJS em nosso projeto 
+---
+Terminal:
+npm install ejs --save
+---
+
+( O resto desta parte será documentada em 'Secao_22\banco_de_dados\index.js' )

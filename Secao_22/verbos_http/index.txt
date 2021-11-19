@@ -1,0 +1,35 @@
+O HTTP é um protocolo de comunicação web
+Este protocolo possui "verbos", verbos este que ajudam a identificar que tipo de ação que queremos realizar.
+Uma URL pode ter mia s de um verbo e executar uma ação diferente para cada um desse verbos.
+Por exemplo, GET/users pode executar uma ação deferente de
+POST/users.
+GET - Baixar usuários
+POST - Criar um usuário novo.
+
+O HTTP possui vários verbos mas os principais são:
+GET  - Utilizados para solicitar dados
+POST - Utilizamos para cadastrar dados
+PUT/PATCH - Utilizado para atualizar dados
+DELETE - Deletar dados.
+
+Esses junto de uma URL formam uma requisição
+
+Status
+------
+Os status definem como uma requisição HTTP foi processada.
+Ao fazer uma requisição, o cliente sempre terá uma resposta,
+os status são códigos numéricos e cada um possui sua representação.
+Os status de tipo 100 são apenas respsota informativas ao cliente.
+Os status da família 200, são quando uma requisição foi feita com sucesso.
+200 - Requisição GET feita com sucesso
+201 - Requisição POST feita com sucesso
+
+Os tipo 300 representam mensagems de redirecionamento.
+
+Os da família 400 apresenta mensagem de erro.
+400 - Sintaxe inválida
+401 - Informa que o cliente precisa se autenticar
+403 - Informa que o cliente apesar de autenticado, não tem acesso ao recurso desejado.
+422- Requisição bem formada, mas possui erros semânticos.
+
+Os da família 500 representam dados no servidor.

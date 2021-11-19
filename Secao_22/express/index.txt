@@ -1,0 +1,66 @@
+O que é o ExpressJS?
+--------------------
+É um conjunto de ferramentas para podemos lidar de melhor forma com essas entradas e saídas
+de chamadas dos usuários.
+Ele opera atráves de middlewares, eles passam as requisições e as resposta de um para o outro,
+se você recebe uma informação em JSON e quer converter ela para algo mais simples você pode ter um middleware
+que pode fazer isso antes que a requisição seja chamada.
+Concluindo, o ExpressJS se preocupa em apenas entregar a requisição e a resposta deixando todo fluxo de dados
+a escolha para o desenvolvedor.
+
+Antes de tudo iremos instalar o Express com o NodeMON para que haja monitoração dos arquivos.
+---
+Terminal:
+npm install express --save
+npm install nodemon --save-dev // utilizamos --dev para instalar uma dependência apenas de desenvolvimento.
+---
+
+Agora vamos rodar um servidor com o nodemon para que haja o monitoramento de alteração de arquivos.
+---
+Terminal:
+npx nodemon
+---
+
+Respostas JSON
+--------------
+Agora vamos ver como enviar respostas JSON.
+Esta parte será documentada em ./index.js
+
+Postman
+-------
+Iremos instalar uma ferramenta util para testarmos o nosso Backend, é uma ferramenta que nos ajuda a fazer chamadas
+web.
+O Postman é um software, então instale ele direto do Site.
+https://www.postman.com/downloads/
+Dentro dele iremos criar uma nova workspace e dentro dessa workspace você vai criar uma nova collection.
+Certifique-se que o servidor está ligadop e esta collection iremos criar uma nova request, colocando o link da nossa Home. ( localhost:3000 )
+Assim que você enviar a requisição ele irá justamente te enviar a nossa página com o <h1>
+
+Chain of Responsability
+-----------------------
+Significa "Cadeia da responsabilidade" e é um padrão que o Express adota.
+Isso permite que os objetos sejam encadeados, para cada encadeamento o middleware verifica se pode ou não passar uma resposta para o usuário.
+Caso não possa ele passa para a próxima cadeia middleware até que o usuário obtenha uma resposta.
+O middleware pode simplesmente fazer logs, ou converter formatos, ou medir o tempo de requisição, verificar se ele o usuário está autenticado ou não.
+Agora iremos ver como utilizá-los em index.js
+
+Concentrando Rotas
+------------------
+Isso é para organizar melhor, se fizermos muito rotas o código pode ficar confuso e por isso devemos concentrá-las
+Vamos criar uma pasta src contendo rotas!
+Esta parte será documentada em ./src
+
+POST
+----
+A rota POST é algo simples porém fudamental, iremos ver como ela funciona.
+Esta parte será documentada em ./src
+
+Rotas com parâmetros
+--------------------
+Iremos aprender a como fazer rotas com parâmetros.
+Esta parte será documentada em ./src
+
+PUT e DELETE
+------------
+Agora iremos criar rotas para atualizar elementos e deletar.
+Esta parte será documentada em ./src

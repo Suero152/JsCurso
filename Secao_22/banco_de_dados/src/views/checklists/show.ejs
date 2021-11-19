@@ -1,0 +1,37 @@
+<%- include('../layouts/header.ejs', {title: checklist.name}) %>
+<%- include('../layouts/menu.ejs') %>
+<section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-four-fifths">
+          <h1 class="title size-4"><%=checklist.name%></h1>
+        </div>
+        <div class="column is-one-fifth">
+          <a href="/checklists/<%=checklist._id%>/tasks/new" class="button is-success is-small">Nova Tarefa</a>
+          <a href="/checklists" class="button is-small">Voltar</a>
+        </div>
+      </div>
+
+      <hr />
+
+        <%if (checklist.tasks.length > 0){%>
+            <% checklist.tasks.forEach(t=>{%>
+              <div class="columns">
+                <div class="column is-four-fifths <%= t.done ? 'has-text-success is italic' : ''%>">
+                    <input type="checkbox" onchange="setTagAsDone(this, '<%= t._id%>')" <%= t.done ? 'checked':''%>/> <%=t.name%>
+                  </div>
+          
+                  <div class="column is-one-fifth">
+                    <a class="button is-danger is-small" href="/tasks/<%=t._id%>?_method=delete">Remover</a>
+                  </div>
+                </div>
+            <%})%>
+        <%}else{%>
+          <div class="columns">
+          <h1 class="subtitle is-3" style="margin: auto;margin-top: 20px;">Parece que sua lista de tarefas está vazia, considere adicionar alguma.</h1>
+          </div>
+          <%}%>
+    </div>
+    </div>
+  </section>
+<%- include('../layouts/footer.ejs') %>

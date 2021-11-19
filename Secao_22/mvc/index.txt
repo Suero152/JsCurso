@@ -1,0 +1,7 @@
+MVC
+---
+Existem muitas formas de organizar um projeto com Backend, uma delas é o MVC que significa Model View e Controller.
+Nela existem três responsabilidades principais:
+Model: Responsável por lidar com os dados, desde sua leitura, armazenamento e validação.
+View: é a parte de exibição de dados para o usuário.
+Controller: Responsável por receber as requisições das views e chamar o model correto.
